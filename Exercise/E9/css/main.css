@@ -1,5 +1,10 @@
 body {
-	background-color: orangered;
+  background: orangered;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .g-body {
 	width:200px;
@@ -14,12 +19,7 @@ body {
 	left: 50px;
 
 }body {
-  background: radial-gradient(circle at center, #111 60%, #000);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+ 
 }
 
 /* Ghost body */
@@ -115,7 +115,7 @@ body {
 
 
 body {
-  background: radial-gradient(circle at center, #111 60%, #000);
+  background: orangered;
   height: 100vh;
   display: flex;
   justify-content: center;
