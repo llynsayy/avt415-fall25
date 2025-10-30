@@ -1,10 +1,5 @@
 body {
-  background: linear-gradient(135deg, #ff4500, #ff8c00);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+	background-color: orangered;
 }
 .g-body {
 	width:200px;
@@ -17,12 +12,7 @@ body {
 	position: absolute;
 	top: 30px;
 	left: 50px;
-
-}body {
- 
-
- 
-
+}
 
 * {
   margin: 0;
@@ -67,6 +57,7 @@ span {
   line-height: .8;
   transition: ease-out .6s;
 }
+
 
 
 
