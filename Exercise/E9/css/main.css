@@ -1,11 +1,170 @@
 body {
-  background: linear-gradient(135deg, #ff4500, #ff8c00);
+  body {
+  margin: 0;
   height: 100vh;
+  background: linear-gradient(135deg, #ff4500, #ff8c00);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
+
+.ghost-canvas{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+}
+
+.ghost-body{
+    position: absolute;
+    height: 28%;
+    width: 22%;
+    background-color: white;
+    left: 40%;
+    top:  33%;
+  /*ANIMATION START*/
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+  /*ANIMATION END*/
+}
+.ghost-body-copy{
+    position: absolute;
+    height: 28%;
+    width: 22%;
+    background-color: white;
+    left: 40%;
+    top:  33%;
+    z-index: 1;
+}
+
+.ghost-head{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    background-color: white;
+    border-radius: 90px;
+    
+}
+.eye-right{
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    right: 22%;
+    top: 40%;
+    background-color: black;
+    border-radius: 50%;
+}
+.eye-left{
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    left: 22%;
+    top: 40%;
+    background-color: black;
+    border-radius: 50%;
+}
+.mouth{
+    position: absolute;
+    height: 26%;
+    width: 24%;
+    left: 38%;
+    top: 70%;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2
+}
+.down-bubble{
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    top:70%;
+}
+
+.bubble-1{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-2{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    left: 25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-3{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    right: 25%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+.bubble-4{
+    position: absolute;
+    height: 100%;
+    width:25%;
+    right: 0;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  /*ANIMATION START*/
+    animation-name: bubble;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+  /*ANIMATION END*/
+}
+
+/*ANIMATION START*/
+@keyframes bubble{
+    0%{
+        top: 0;
+    }
+    50%{
+        top:20%;
+    }
+     100%{
+        top: 0;
+    }
+}
+@keyframes floating{
+    0%{top: 33%;}
+    30%{top: 40%;}
+    50%{top:33%;}
+    70%{top:25%;}
+    100%{top:33%;}
+}
+/*ANIMATION END*/
+
+
 .g-body {
 	width:200px;
 	height:400px;
@@ -18,100 +177,8 @@ body {
 	top: 30px;
 	left: 50px;
 
-}body {
+
  
-}
-
-/* Ghost body */
-.ghost {
-  position: relative;
-  width: 120px;
-  height: 150px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 60% 60% 40% 40%;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
-  animation: float 5s ease-in-out infinite;
-  filter: blur(0.3px);
-}
-
-/* Ghost tail waves */
-.ghost::before,
-.ghost::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 30px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-}
-
-.ghost::before {
-  left: 15px;
-  animation: wave 2s infinite alternate;
-}
-
-.ghost::after {
-  right: 15px;
-  animation: wave 2s infinite alternate-reverse;
-}
-
-/* Face */
-.face {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Eyes */
-.eye {
-  width: 15px;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 50%;
-  margin: 0 8px;
-  display: inline-block;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.face .eye:first-child {
-  margin-right: 20px;
-}
-
-/* Mouth */
-.mouth {
-  width: 30px;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 0 0 20px 20px;
-  margin-top: 10px;
-}
-
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-25px) scale(1.03);
-  }
-}
-
-/* Wavy tail animation */
-@keyframes wave {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(6px);
-  }
-  box-shadow: 0 0 60px rgba(255, 255, 255, 0.7);
-}
-
 
 * {
   margin: 0;
