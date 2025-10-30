@@ -12,7 +12,207 @@ body {
 	position: absolute;
 	top: 30px;
 	left: 50px;
+
+}body {
+  background: radial-gradient(circle at center, #111 60%, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
+/* Ghost body */
+.ghost {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 60% 60% 40% 40%;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  animation: float 5s ease-in-out infinite;
+  filter: blur(0.3px);
+}
+
+/* Ghost tail waves */
+.ghost::before,
+.ghost::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.ghost::before {
+  left: 15px;
+  animation: wave 2s infinite alternate;
+}
+
+.ghost::after {
+  right: 15px;
+  animation: wave 2s infinite alternate-reverse;
+}
+
+/* Face */
+.face {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyes */
+.eye {
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  margin: 0 8px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.face .eye:first-child {
+  margin-right: 20px;
+}
+
+/* Mouth */
+.mouth {
+  width: 30px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0 0 20px 20px;
+  margin-top: 10px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.03);
+  }
+}
+
+/* Wavy tail animation */
+@keyframes wave {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+
+
+
+body {
+  background: radial-gradient(circle at center, #111 60%, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ghost body */
+.ghost {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 60% 60% 40% 40%;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  animation: float 5s ease-in-out infinite;
+  filter: blur(0.3px);
+}
+
+/* Ghost tail waves */
+.ghost::before,
+.ghost::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.ghost::before {
+  left: 15px;
+  animation: wave 2s infinite alternate;
+}
+
+.ghost::after {
+  right: 15px;
+  animation: wave 2s infinite alternate-reverse;
+}
+
+/* Face */
+.face {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyes */
+.eye {
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  margin: 0 8px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.face .eye:first-child {
+  margin-right: 20px;
+}
+
+/* Mouth */
+.mouth {
+  width: 30px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0 0 20px 20px;
+  margin-top: 10px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.03);
+  }
+}
+
+/* Wavy tail animation */
+@keyframes wave {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+
 
 * {
   margin: 0;
