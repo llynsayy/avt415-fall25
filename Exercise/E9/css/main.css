@@ -1,5 +1,6 @@
 body {
 	background-color: orangered;
+	margin:0;
 }
 .g-body {
 	width:150px;
@@ -13,7 +14,13 @@ body {
 	top: 30px;
 	left: 50px;
 }
-
+.g-right-eye {
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 100%;
+	position: absolute;
+}
 
 
 * {
