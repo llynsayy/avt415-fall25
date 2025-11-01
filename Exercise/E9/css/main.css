@@ -3,8 +3,8 @@ body {
 	margin:0;
 }
 .g-body {
-	width: 200px;
-	height: 400px;
+	width: 150px;
+	height: 250px;
 	background-color: ghostwhite;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
@@ -16,7 +16,7 @@ body {
 }
 .g-right-eye {
 	width: 30px;
-	height: 30px;
+	height: 50px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
@@ -25,7 +25,7 @@ body {
 }
 .g-left-eye {
 	width: 30px;
-	height: 30px;
+	height: 50px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
@@ -35,7 +35,7 @@ body {
 .g-mouth {
 	width: 100px;
 	height: 50px;
-	background-color: black;
+	background-color: gray;
 	border-radius: 100%;
 	position: absolute;
 	top: 200px;
@@ -43,8 +43,8 @@ body {
 }
 
 .g-body-alt {
-	width: 200px;
-	height: 400px;
+	width: 150px;
+	height: 250px;
 	background-color: ghostwhite;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
@@ -76,7 +76,7 @@ body {
 
 .g-right-eye-alt {
 	width: 30px;
-	height: 30px;
+	height: 50px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
@@ -85,7 +85,7 @@ body {
 }
 .g-left-eye-alt {
 	width: 30px;
-	height: 30px;
+	height: 50px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
@@ -95,7 +95,7 @@ body {
 .g-mouth-alt {
 	width: 100px;
 	height: 50px;
-	background-color: black;
+	background-color: gray;
 	border-radius: 100%;
 	position: absolute;
 	top: 150px;
@@ -103,7 +103,6 @@ body {
 }
 
 
-}
 * {
   margin: 0;
   padding: 0;
