@@ -3,8 +3,8 @@ body {
 	margin:0;
 }
 .g-body-alt {
-	width:150px;
-	height:250px;
+	width: 150px;
+	height: 250px;
 	background-color: ghostwhite;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
@@ -13,33 +13,13 @@ body {
 	position: absolute;
 	top: 30px;
 	left: 50px;
-	animation: floatAround 6s ease-in-out infinite;
+	animation: floatAround 6s ease-in-out infinite alternate;
+	box-shadow: 0 0 20px rgba( 255, 255, 255, 0.4);
 
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
 }
 
-	@keyframes floatAround {
-		0% {
-			transform: translate(0, 0);
-		}
-		25% { 
-			transform: translate(50px, -20px);
-		}
-		50% {
-			transform: translate(100px, 0px);
-		}
-		75% {
-			transform: translate(50px, 20px);
-		}
-		100% {
-			transform: translate(0, 0);
-		}
-	}
-
-}
 .g-right-eye-alt, .g-left-eye-alt {
 	width: 25px;
 	height: 35px;
@@ -65,10 +45,26 @@ body {
 	border-radius: 65%;
 	position: absolute;
 	top: 130px;
-	left: 90px;
-	
+	left: 90px;	
 }
 
+@keyframes floatAround {
+		0% {
+			transform: translate(0, 0);
+		}
+		25% { 
+			transform: translate(50px, -20px);
+		}
+		50% {
+			transform: translate(100px, 0px);
+		}
+		75% {
+			transform: translate(50px, 20px);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+	}
 
 }
 * {
