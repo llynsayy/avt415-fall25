@@ -20,13 +20,10 @@ body {
 }
 
 	@keyframes up-down {
-		0% {
-			top: 50px;
+		from {
 			left: 50px;
 		}
-		100% { 
-			top: 100vw;
-			left: 50px;
+		to { right: 50px;
 		}
 	}
 
