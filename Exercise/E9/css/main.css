@@ -5,7 +5,7 @@ body {
 .g-body-alt {
 	width: 150px;
 	height: 250px;
-	background-color: ghostwhite;
+	background-color: white;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
 	border-bottom-left-radius: 20px;
@@ -13,9 +13,9 @@ body {
 	position: absolute;
 	top: 30px;
 	left: 50px;
+	z-index: 1;
 	animation: floatAround 6s ease-in-out infinite alternate;
-	box-shadow: 0 0 20px rgba( 255, 255, 255, 0.4);
-
+	
 
 	position: relative;
 }
@@ -26,26 +26,27 @@ body {
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
-	top: 75px;
+	top: 60px;
 	
 	
 }
 .g-right-eye-alt {
-	left: 40px;
+	left: 35px;
 }
 
 .g-left-eye-alt {
-	left: 85px;
+	left: 35px;
 }
 }
 .g-mouth-alt {
-	width: 15px;
-	height: 25px;
+	width: 40px;
+	height: 20px;
 	background-color: gray;
-	border-radius: 65%;
+	border-radius: 50%;
 	position: absolute;
 	top: 130px;
-	left: 90px;	
+	left: 50px;	
+	transform: translate(-50%);
 }
 
 @keyframes floatAround {
