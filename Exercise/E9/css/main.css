@@ -2,70 +2,106 @@ body {
 	background-color: orangered;
 	margin:0;
 }
-.g-body-alt {
-	width: 150px;
-	height: 250px;
-	background-color: white;
+.g-body {
+	width: 200px;
+	height: 400px;
+	background-color: ghostwhite;
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	position: absolute;
-	top: 30px;
-	left: 50px;
-	z-index: 1;
-	animation: floatAround 6s ease-in-out infinite alternate;
-	
-
-	position: relative;
+	top: 50px;
+	left: 100px;
 }
-
-.g-right-eye-alt, .g-left-eye-alt {
-	width: 25px;
-	height: 35px;
+.g-right-eye {
+	width: 30px;
+	height: 30px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
-	top: 60px;
-	
-	
+	top: 130px;
+	left: 150px;
 }
-.g-right-eye-alt {
-	left: 35px;
-}
-
-.g-left-eye-alt {
-	left: 35px;
-}
-}
-.g-mouth-alt {
-	width: 40px;
-	height: 20px;
-	background-color: gray;
-	border-radius: 50%;
+.g-left-eye {
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 100%;
 	position: absolute;
 	top: 130px;
-	left: 50px;	
-	transform: translate(-50%);
+	left: 230px;
+}
+.g-mouth {
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	border-radius: 100%;
+	position: absolute;
+	top: 200px;
+	left: 150px;
 }
 
-@keyframes floatAround {
-		0% {
-			transform: translate(0, 0);
-		}
-		25% { 
-			transform: translate(50px, -20px);
-		}
-		50% {
-			transform: translate(100px, 0px);
-		}
-		75% {
-			transform: translate(50px, 20px);
-		}
-		100% {
-			transform: translate(0, 0);
-		}
-	}
+.g-body-alt {
+	width: 200px;
+	height: 400px;
+	background-color: ghostwhite;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	position: absolute;
+	top: 50px;
+	left: calc((100vw - 200px) / 2);
+	animation-duration: 10s;
+  animation-name: up-down;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes up-down {
+  0% {
+    top: 50px;
+    left: calc((100vw - 200px) / 2);
+  }
+  50% {
+  	top: 25px;
+    left: 0;
+  }
+  100% {
+    top: 75px;
+    left: calc(100vw - 200px)
+  }
+}
+
+.g-right-eye-alt {
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 100%;
+	position: absolute;
+	top: 80px;
+	left: 50px;
+}
+.g-left-eye-alt {
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	border-radius: 100%;
+	position: absolute;
+	top: 80px;
+	left: 130px;
+}
+.g-mouth-alt {
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	border-radius: 100%;
+	position: absolute;
+	top: 150px;
+	left: 50px;
+}
+
 
 }
 * {
