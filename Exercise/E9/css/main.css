@@ -11,7 +11,7 @@ body {
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	position: absolute;
-	top: 50px;
+	top: 75px;
 	left: 100px;
 }
 .g-right-eye {
@@ -51,7 +51,7 @@ body {
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	position: absolute;
-	top: 50px;
+	top: 75px;
 	left: calc((100vw - 200px) / 2);
 	animation-duration: 10s;
   animation-name: up-down;
