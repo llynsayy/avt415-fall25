@@ -14,13 +14,6 @@ body {
 	left: 50px;
 }
 
-.g-feet {
-	width: 100px;
-	height: 26px;
-	position: absolute;
-	bottom: 13px;
-	display: flex;
-	justify-content: space-between;
 
 
 * {
