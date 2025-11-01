@@ -2,7 +2,7 @@ body {
 	background-color: orangered;
 	margin:0;
 }
-.g-body {
+.g-body-alt {
 	width:150px;
 	height:250px;
 	background-color: ghostwhite;
@@ -13,37 +13,43 @@ body {
 	position: absolute;
 	top: 30px;
 	left: 50px;
-	animation: float 4s ease-in-out infinite alternate;
+	animation-duration: 3s;
+    animation-name: up-down;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
-	@keyframes float {
+	@keyframes up-down {
 		0% {
-			transform: translateX(0);
+			top: 50px;
+			left: 50px;
 		}
-		100% { transform:translateX(300px); 
+		100% { 
+			top: 100vw;
+			left: 50px;
 		}
 	}
 
 }
-.g-right-eye {
+.g-right-eye-alt, .g-left-eye-alt {
 	width: 25px;
 	height: 35px;
 	background-color: black;
 	border-radius: 100%;
 	position: absolute;
 	top: 75px;
-	left: 75px;
+	
+	
 }
-.g-left-eye {
-	width: 25px;
-	height: 35px;
-	background-color: black;
-	border-radius: 100%;
-	position: absolute;
-	top: 75px;
-	left: 100px;
+.g-right-eye-alt {
+	left: 40px;
+}
 
+.g-left-eye-alt {
+	left: 85px;
 }
-.g-mouth {
+}
+.g-mouth-alt {
 	width: 15px;
 	height: 25px;
 	background-color: gray;
@@ -51,6 +57,7 @@ body {
 	position: absolute;
 	top: 130px;
 	left: 90px;
+	
 }
 
 
